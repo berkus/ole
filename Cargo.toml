@@ -1,17 +1,17 @@
 [package]
 name = "ole"
-version = "0.1.15"
-authors = ["Thomas BAILLEUX <thomas@bailleux.me>"]
+version = "0.1.16"
+authors = [
+    "Thomas BAILLEUX <thomas@bailleux.me>",
+    "Berkus Decker <berkus+crates@madfire.net>",
+]
 license = "WTFPL"
 description = "Simple parser and reader for Microsoft Compound Document File."
 homepage = "https://github.com/zadlg/ole"
 keywords = ["ole", "compound", "document", "file", "parser"]
 categories = ["parser-implementations", "parsing"]
-repository = "https://github.com/zadlg/ole.git"
+repository = "https://github.com/berkus/ole.git"
 readme = "README.md"
 edition = "2021"
-
-[lib]
-name = "ole"
 
 [dependencies]
