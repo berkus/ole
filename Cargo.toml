@@ -15,4 +15,5 @@ readme = "README.md"
 edition = "2021"
 
 [dependencies]
+culpa = "1.0.2"
 thiserror = "1.0.64"
