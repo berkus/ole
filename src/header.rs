@@ -20,7 +20,7 @@ use std::io::Read;
 impl<'ole> super::ole::Reader<'ole> {
 
   pub(crate) fn parse_header(&mut self) -> Result<(), super::error::Error> {
-    use util::FromSlice;
+    use crate::util::FromSlice;
 
     // read the header
     let mut header: std::vec::Vec<u8>
@@ -137,7 +137,7 @@ impl<'ole> super::ole::Reader<'ole> {
   /// Build the Master Sector Allocation Table (MSAT)
   fn build_master_sector_allocation_table(&mut self, header: &[u8])
       -> Result<(), super::error::Error> {
-    use util::FromSlice;
+    use crate::util::FromSlice;
 
     // First, we build the master sector allocation table from the header
     let mut total_sec_id_read = self.read_sec_ids(&header[76 ..], 0);
@@ -182,7 +182,7 @@ impl<'ole> super::ole::Reader<'ole> {
   }
 
   fn read_sec_ids(&mut self, buffer: &[u8], msat_offset: usize) -> usize {
-    use util::FromSlice;
+    use crate::util::FromSlice;
     let mut i = 0usize;
     let mut offset = 0usize;
     let max_sec_ids = buffer.len() / 4;

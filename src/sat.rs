@@ -42,7 +42,7 @@ impl<'ole> super::ole::Reader<'ole> {
   pub(crate) fn read_sat_sector(&mut self, sector_index: usize,
       sec_ids: &mut std::vec::Vec<u32> ) -> Result<(), super::error::Error> {
     let sector = self.read_sector(sector_index)?;
-    use util::FromSlice;
+    use crate::util::FromSlice;
     for i in 0 .. sec_ids.capacity() {
       sec_ids[i] = u32::from_slice(&sector[ i * 4 .. i * 4 + 4]);
     }

@@ -53,17 +53,17 @@
 
 
 mod ole;
-pub use ole::Reader;
+pub use crate::ole::Reader;
 pub(crate) mod iterator;
-pub use iterator::OLEIterator;
+pub use crate::iterator::OLEIterator;
 mod error;
-pub use error::Error;
+pub use crate::error::Error;
 pub(crate) mod header;
 pub(crate) mod util;
 pub(crate) mod sat;
 pub(crate) mod constants;
 pub(crate) mod entry;
-pub use entry::Entry;
-pub use entry::EntrySlice;
-pub use entry::EntryType;
+pub use crate::entry::Entry;
+pub use crate::entry::EntrySlice;
+pub use crate::entry::EntryType;
 pub(crate) mod sector;

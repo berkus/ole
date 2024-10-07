@@ -160,7 +160,7 @@ impl Entry {
 
   fn from_slice(sector: &[u8], dir_id: u32)
       -> Result<Entry, super::error::Error> {
-    use util::FromSlice;
+    use crate::util::FromSlice;
     let entry = Entry {
       id: dir_id,
       name: Entry::build_name(&sector[0 .. 64]),
