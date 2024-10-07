@@ -66,7 +66,7 @@ impl std::error::Error for Error {
     }
   }
 
-  fn cause(&self) -> Option<&std::error::Error> {
+  fn cause(&self) -> Option<&dyn std::error::Error> {
     match *self {
       Error::IOError(ref e) => Some(e),
       _ => None

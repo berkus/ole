@@ -38,7 +38,7 @@ use std;
 pub struct Reader<'ole> {
 
   /// Buffer for reading from the source.
-  pub(crate) buf_reader: Option<std::io::BufReader<Box<std::io::Read + 'ole>>>,
+  pub(crate) buf_reader: Option<std::io::BufReader<Box<dyn std::io::Read + 'ole>>>,
 
   /// Unique identifier.
   pub(crate) uid: std::vec::Vec<u8>,

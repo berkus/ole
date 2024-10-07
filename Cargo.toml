@@ -9,7 +9,7 @@ keywords = ["ole", "compound", "document", "file", "parser"]
 categories = ["parser-implementations", "parsing"]
 repository = "https://github.com/zadlg/ole.git"
 readme = "README.md"
-edition = "2018"
+edition = "2021"
 
 [lib]
 name = "ole"
